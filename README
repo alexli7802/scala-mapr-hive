@@ -1,0 +1,15 @@
+
+1. make the assembly "ali-hive-connector.jar"
+   -> sbt assembly
+   
+2. try the example in a MapR/Hive env.
+   -> java -cp ali-hive-connector.jar:hive-jdbc-2.1.1-mapr-1803-standalone.jar:hadoop-common-2.7.0-mapr-1707.jar dataconn.HiveClient
+   
+   (cp /opt/mapr/hive/hive-2.1/jdbc/hive-jdbc-2.1.1-mapr-1803-standalone.jar ./...)
+   (cp /opt/mapr/hadoop/hadoop-2.7.0/share/hadoop/common/hadoop-common-2.7.0-mapr-1707.jar ./...)
+   
+3. you need to have table 'na_control_plane_kpi' in hive-db first !!!!
+
+********************************************************************************
+**** It's recommended to deploy this only on a client with MapR/Hive env. ) ****
+******************************************************************************** 
