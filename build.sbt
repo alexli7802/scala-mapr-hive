@@ -9,7 +9,10 @@ lazy val root = (project in file(".")).
     )),
     name := "scala-mapr-hive",
     libraryDependencies ++= Seq(
-      scalaTest % Test
+      scalaTest % Test,
+      "com.typesafe.slick" %% "slick" % "3.2.3",
+      "org.slf4j" % "slf4j-nop" % "1.6.4",
+      "com.typesafe.slick" %% "slick-hikaricp" % "3.2.3"      
     ),
     assemblyJarName in assembly := "ali-hive-connector.jar"
   )
